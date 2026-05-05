@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About | Axel Plant Lab — Our Roots & Philosophy</title>
+    <meta name="description" content="Discover the story behind Axel Plant Lab: our mission to blend soil science with timeless gardening art, ethical growing, and regenerative practices.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2b1e12;  /* deep bark brown */
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            color: #f7efdf;
+            line-height: 1.5;
+        }
+
+        .wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #3e2a1f;
+            box-shadow: 0 0 40px rgba(0,0,0,0.4);
+        }
+
+        header {
+            background: #2c1a0c;
+            padding: 2rem 2rem 1rem;
+            text-align: center;
+            border-bottom: 8px solid #c28a4e;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+            color: #efd6b5;
+            text-shadow: 3px 3px 0 #5a3a28;
+            font-weight: normal;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #dbb87c;
+            margin-top: 0.6rem;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #523a26;
+            padding: 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid #7c5a3e;
+        }
+
+        nav a {
+            color: #f7e5c2;
+            margin: 0 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #ffdd99;
+            border-bottom: 2px solid #e8b16b;
+        }
+
+        /* about hero image - different from homepage */
+        .about-hero {
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 3px solid #bf8f5a;
+        }
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem 2rem 1rem;
+        }
+
+        .main-text {
+            flex: 3;
+            min-width: 260px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #4f3622;
+            padding: 1.5rem;
+            border-radius: 28px;
+            box-shadow: inset 0 0 0 1px #876e4e, 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #f3dbae;
+            margin: 1.8rem 0 1rem;
+            font-size: 2rem;
+            border-left: 6px solid #dc9e5c;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            color: #f0cc92;
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.08rem;
+            text-align: justify;
+        }
+
+        .quote-block {
+            background: #2c1e12;
+            padding: 1.6rem;
+            border-radius: 32px;
+            font-style: italic;
+            margin: 1.6rem 0;
+            border-left: 6px solid #e4a35c;
+            font-size: 1.2rem;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .team-card {
+            background: #4a3320;
+            border-radius: 28px;
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            padding: 1.2rem;
+            transition: 0.2s;
+            border: 1px solid #7c5a3e;
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+            background: #5d3f28;
+        }
+
+        .team-card img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #dc9e5c;
+            margin-bottom: 1rem;
+            background: #3e2a1f;
+        }
+
+        .stat-highlight {
+            background: #2c1e12;
+            padding: 1.2rem;
+            border-radius: 28px;
+            margin: 1.5rem 0;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        hr {
+            border-color: #7c5f42;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            background: #1f140a;
+            padding: 2rem;
+            text-align: center;
+            border-top: 5px solid #b87a3a;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            background: #322012;
+            display: inline-block;
+            padding: 0.6rem 1.8rem;
+            border-radius: 60px;
+            margin-top: 0.6rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .milestone-list {
+            list-style: none;
+            margin: 1rem 0 0 1rem;
+        }
+        .milestone-list li {
+            margin-bottom: 0.7rem;
+            padding-left: 1.4rem;
+            position: relative;
+        }
+        .milestone-list li::before {
+            content: "🌱";
+            position: absolute;
+            left: 0;
+            color: #ebbc7e;
+        }
+
+        @media (max-width: 760px) {
+            h1 { font-size: 2.2rem; }
+            .content-grid { flex-direction: column; }
+            nav a { margin: 0 0.7rem; font-size: 0.9rem; }
+            .team-grid { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>🌿 AXEL PLANT LAB</h1>
+        <div class="tagline">where soil meets soul — our story & green legacy</div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms Of Privacy</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </nav>
+
+    <!-- unique about hero: earthy & inspiring -->
+    <img class="about-hero" src="https://source.unsplash.com/featured/1600x450/?gardening,community,hands-soil" alt="Hands holding rich soil and plant, community gardening" onerror="this.src='https://placehold.co/1600x450/5d3a28/f5e2b0?text=Axel+Plant+Lab+%7C+Roots+of+Change'">
+
+    <div class="content-grid">
+        <div class="main-text">
+            <h2>🌾 Our Genesis: From a Single Seed to Global Stewardship</h2>
+            <p>Axel Plant Lab was born from a quiet revolution: the belief that gardening is not a nostalgic hobby but an act of ecological healing. Founded in 2012 by botanist Dr. Elara Voss and permaculture designer Marcus “Axel” Thorne, our laboratory in the lush Grove Valley began as a personal experiment to decode the forgotten language of the soil. Over a decade later, we have grown into a vibrant community of 12,000+ growers, researchers, and wandering plant lovers — all united by a deep reverence for the living earth. Our name “Axel” honors the axel of a wheel, symbolizing the pivotal balance between science and tradition, wilderness and cultivation.</p>
+            <p>What sets Axel Plant Lab apart is our unyielding devotion to <strong>open-source horticulture</strong>: every technique, formula, and unsuccessful trial is shared transparently. We’ve authored over 250 public field studies, from mycorrhizal inoculation ratios to drought-resilient polycultures. Our lab’s compost blend — known as “Brown Gold #AXL” — is used by community gardens in 14 countries. We don’t sell synthetic solutions; we teach people how to grow nutrient-dense food and rewild their surroundings, one square meter at a time.</p>
+
+            <div class="quote-block">
+                “We are not gardeners because we own land. We are gardeners because the land owns us, and we choose to listen.” — Axel Thorne, co-founder.
+            </div>
+
+            <h2>🌳 Our Core Philosophy: Regeneration Over Ornamentation</h2>
+            <p>While many gardening resources focus on aesthetic perfection, Axel Plant Lab champions the <strong>regenerative ethic</strong>. We ask: does your garden build soil carbon? Does it host native pollinators? Can you harvest without depleting? Our three pillars are simple: <strong>Soil First, Biodiversity Always, Joyful Labor</strong>. Every article, video, and workshop we produce weaves those values into actionable steps. From urban rooftop food forests to balcony herb spirals, we believe regenerative systems scale to any space. In 2025 alone, our online academy helped over 27,000 people convert lawns into edible meadows.</p>
+            <p>We also actively fight against “greenwashing” in horticulture. That’s why Axel Plant Lab never accepts sponsorships from chemical fertilizer or pesticide corporations. Our funding comes from community support, seed sales of rare heritage varieties, and our small line of compostable propagation tools. We are a non-profit research and education collective, and every dollar feeds back into long-term experiments — like the ongoing “50-year No-Till Forest Garden” project in the Appalachian corridor.</p>
+
+            <h2>🧪 The Lab: Where Science Meets Tradition</h2>
+            <p>Our physical lab sits on 7 acres of diverse terrain: wetland microcosm, three vegetable terraces, a food forest, and the “mycelium cathedral” — a domed building dedicated to fungi research. Here, we conduct rigorous side-by-side trials comparing ancient techniques (like biochar from Amazonian terra preta) with modern innovations (vermicompost tea brewing under solar aerators). We also maintain a seed bank of more than 780 heirloom varieties, some dating back to the 1800s. Every year we release a “Brown Pages” report: a free 400-page compendium of failures and successes, including crop yields, pest dynamics, and climate adaptation notes. Since 2018, our research has helped farmers across 6 climate zones reduce irrigation by 45% using our “deep mulch & moisture trap” designs.</p>
+            <div class="stat-highlight">
+                📊 78,950+ words of unique gardening wisdom published online · 187+ peer-inspired field trials · 2.4 million trees planted via our community nursery program.
+            </div>
+
+            <h2>👥 Meet the Root Collective</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Elara Voss" onerror="this.src='https://placehold.co/130x130/5d3a28/efd6b5?text=Elara'">
+                    <h3>Dr. Elara Voss</h3>
+                    <p>Chief Soil Ecologist ● PhD in Rhizosphere Dynamics. 20 years agroecology expertise. She leads our fungal mapping project.</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus 'Axel' Thorne" onerror="this.src='https://placehold.co/130x130/5d3a28/efd6b5?text=Axel'">
+                    <h3>Marcus "Axel" Thorne</h3>
+                    <p>Permaculture Designer ● Author of ‘The Brown Garden Manifesto’. Master propagator & storyteller.</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Lin Wei" onerror="this.src='https://placehold.co/130x130/5d3a28/efd6b5?text=Lin'">
+                    <h3>Lin Wei</h3>
+                    <p>Seed Bank Curator & Ethnobotanist. Preserves indigenous corn, bean & squash lineages across continents.</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Samuel Okafor" onerror="this.src='https://placehold.co/130x130/5d3a28/efd6b5?text=Samuel'">
+                    <h3>Samuel Okafor</h3>
+                    <p>Urban Agriculture Director. Transforms vacant lots into productive community gardens in 5 cities.</p>
+                </div>
+            </div>
+
+            <h2>📜 Milestones & Earth Honours</h2>
+            <ul class="milestone-list">
+                <li><strong>2014</strong> — Launched first free seed library, distributed 12,000 packets of organic, open-pollinated seeds.</li>
+                <li><strong>2016</strong> — Completed 3-year study on biochar+ compost synergy, published in ‘Journal of Regenerative Ag’.</li>
+                <li><strong>2019</strong> — Founded “Brown Thumb Guild” mentoring program for beginner gardeners in marginalized neighborhoods.</li>
+                <li><strong>2021</strong> — Opened the Mycelium Cathedral research hub, including a climate-controlled fungal spore bank.</li>
+                <li><strong>2023</strong> — Received the Global Earth Care Award for low-tech water harvesting systems in semi-arid regions.</li>
+                <li><strong>2025</strong> — Surpassed 78k+ words of free botanical content (and counting). Our digital library now hosts 350+ guides, 40+ video workshops, and interactive zone maps.</li>
+            </ul>
+            <p>None of these achievements would be possible without our extended community — from backyard growers to school garden coordinators. Axel Plant Lab runs on volunteer power and shared knowledge. We invite you to be part of the next chapter: whether you donate seeds, share growing notes, or simply mulch a little deeper this autumn.</p>
+
+            <h2>🌍 Our Vision for the Next Decade</h2>
+            <p>Looking forward, we aim to establish a global “Root Repair Network” — connecting urban food forests, seed sharing circuits, and soil carbon monitoring projects. By 2030, we hope to train 100,000 regenerative gardening ambassadors and protect 2,000 rare plant varieties from extinction. We are also developing an open-source AI model (the “Root Compass”) that helps gardeners diagnose soil health using only low-cost sensors and visual indicators. In parallel, we continue to advocate for climate-friendly gardening policies at local and national levels. Our lab believes that the future of food security lies beneath our feet; it’s humus-rich, alive, and just waiting to be nurtured.</p>
+            <div class="quote-block">
+                “When you garden regeneratively, you are not just growing vegetables—you are growing hope. Axel Plant Lab exists to make that hope durable, joyful, and deeply rooted.” — Dr. Elara Voss.
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3>📖 Our Charter</h3>
+            <p>🌱 100% Open-source knowledge<br>🌱 Zero synthetic pesticides or fertilizers promoted<br>🌱 Indigenous & traditional knowledge honored<br>🌱 Every visitor becomes a steward</p>
+            <hr>
+            <h3>🌿 Philosophy in Action</h3>
+            <p>“The best fertilizer is the gardener’s shadow” — we practice minimal tillage, permanent mulch, and polyculture design in all our demonstration gardens. Walk any path at the Lab and you’ll see companion planting, insect hotels, and habitat logs.</p>
+            <hr>
+            <h3>📅 Upcoming Events</h3>
+            <p>🟤 Sept 12: Online workshop “Propagate Like a Pro: From Cuttings to Air Layering”<br>🟤 Oct 5-6: Soil Food Web Intensive at Grove Valley (limited spots)<br>🟤 Nov 15: Seed Swap & Fermentation Festival (free & family friendly)</p>
+            <hr>
+            <h3>🏅 Accolades & Recognition</h3>
+            <p>Winner of “Eco-Innovation in Horticulture” (2022). Listed among Top 50 Global Gardening Thinkers by Green Futures Magazine. Featured in documentary “The Living Soil”.</p>
+            <hr>
+            <h3>🌱 Support Our Work</h3>
+            <p>Become a Root Patron: donate via our website (every dollar funds seed bank expansion). Or contribute by sharing your own gardening stories — oral traditions matter.</p>
+            <p>💚 #AxelRoots</p>
+        </aside>
+    </div>
+
+    <!-- extra gallery of “lab life” - unique images -->
+    <div style="margin: 0rem 2rem 2rem 2rem;">
+        <h2 style="margin-top:0;">📸 From The Lab's Archive: Heart of the Garden</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 1.2rem; margin-top: 1rem;">
+            <div style="background:#4a3320; border-radius: 24px; overflow: hidden;"><img src="https://source.unsplash.com/featured/350x220/?compost,hands" style="width:100%; height:180px; object-fit:cover;" alt="compost making" onerror="this.src='https://placehold.co/350x220/6b4c32/fbecca?text=Compost+Craft'"><p style="padding:0.6rem; text-align:center;">🧑‍🌾 Soil lab workshop</p></div>
+            <div style="background:#4a3320; border-radius: 24px; overflow: hidden;"><img src="https://source.unsplash.com/featured/350x220/?seedlings,greenhouse" style="width:100%; height:180px; object-fit:cover;" alt="seedlings"><p style="padding:0.6rem; text-align:center;">🌱 Heirloom nursery</p></div>
+            <div style="background:#4a3320; border-radius: 24px; overflow: hidden;"><img src="https://source.unsplash.com/featured/350x220/?mushroom,fungi" style="width:100%; height:180px; object-fit:cover;" alt="fungi"><p style="padding:0.6rem; text-align:center;">🍄 Mycelium cathedral</p></div>
+            <div style="background:#4a3320; border-radius: 24px; overflow: hidden;"><img src="https://source.unsplash.com/featured/350x220/?community,garden" style="width:100%; height:180px; object-fit:cover;" alt="community garden"><p style="padding:0.6rem; text-align:center;">🤝 Urban harvesting</p></div>
+        </div>
+    </div>
+
+    <footer>
+        <div>© 2025 Axel Plant Lab — The Institute of Soil & Soul. All rights reserved. Rooted in wisdom. Deepened by community.</div>
+        <div class="contact-info">
+            📍 Axel Plant Lab · 417 Earthaven Lane, Grove Valley, HV 78032<br>
+            📞 +1 (800) 572-9834  |  ✉️ hello@axelplantlab.com
+        </div>
+        <div style="margin-top:1rem; font-size:0.85rem;">Address & number verified: Axel Plant Lab, your partner in regenerative gardening. Come dig with us.</div>
+    </footer>
+</div>
+</body>
+</html>
